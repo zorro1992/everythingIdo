@@ -16,7 +16,7 @@ default_args = {
 dag = DAG('ETL', default_args=default_args, schedule_interval=timedelta(hours=24*7))
 
 
-t_pipeline0 = BashOperator(
+pipe0 = BashOperator(
     task_id='oozie_set',
     bash_command=
       """
@@ -26,7 +26,7 @@ t_pipeline0 = BashOperator(
       """,
     dag=dag)
 
-t_pipeline1 = BashOperator(
+pipe1 = BashOperator(
     task_id='oozie_01',
     bash_command=
       """
@@ -36,7 +36,7 @@ t_pipeline1 = BashOperator(
       """,
     dag=dag)
 
-t_pipeline2 = BashOperator(
+pipe2 = BashOperator(
     task_id='oozie_02',
     bash_command=
       """
@@ -46,7 +46,7 @@ t_pipeline2 = BashOperator(
       """,
     dag=dag)
 
-t_pipeline3 = BashOperator(
+pipe3 = BashOperator(
     task_id='oozie_03',
     bash_command=
       """
@@ -56,7 +56,7 @@ t_pipeline3 = BashOperator(
       """,
     dag=dag)
 
-t_pipeline4 = BashOperator(
+pipe4 = BashOperator(
     task_id='oozie_04',
     bash_command=
       """
@@ -66,7 +66,7 @@ t_pipeline4 = BashOperator(
       """,
     dag=dag)
 
-t_pipeline5 = BashOperator(
+pipe5 = BashOperator(
     task_id='oozie_k2',
     bash_command=
       """
@@ -76,7 +76,7 @@ t_pipeline5 = BashOperator(
       """,
     dag=dag)
 
-t_pipeline6 = BashOperator(
+pipe6 = BashOperator(
     task_id='set_env',
     bash_command=
       """
@@ -88,39 +88,39 @@ t_pipeline6 = BashOperator(
       """,
     dag=dag)
 
-t_pipeline7 = BashOperator(
+pipe7 = BashOperator(
     task_id='oozie_1',
     bash_command=
       """
         ssh -i ~/.ssh/company.pem.pem hadoop@x.y.z\
             "source /home/hadoop/.bashrc \
             && cd /development/prod/oozie \
-            && bash run.sh application-spark-parquet-reader.conf oozie-high-priority.json > /home/data-management/cron_logs/oozie_high_priority.log" \
+            && bash run.sh application-spark-json-reader.conf oozie-high-priority.json > /home/data-management/cron_logs/oozie_high_priority.log" \
         2>&1""",
     dag=dag)
 
 
-t_pipeline8 = BashOperator(
+pipe8 = BashOperator(
     task_id='oozie_2',
     bash_command=
       """
         ssh -i ~/.ssh/company.pem.pem hadoop@x.y.z \
             "source /home/hadoop/.bashrc \
             && cd /development/prod/oozie \
-            && bash run.sh application-spark-parquet-reader.conf oozie.json >> /home/data-management/cron_logs/oozie_spark_conf_jobs.log" \
+            && bash run.sh application-spark-json-reader.conf oozie.json >> /home/data-management/cron_logs/oozie_spark_conf_jobs.log" \
         2>&1""",
     dag=dag)
 
 
-t_pipeline9 = BashOperator(
+pipe9 = BashOperator(
     task_id='oozie_3',
     bash_command=
       """
         ssh -i ~/.ssh/company.pem.pem hadoop@x.y.z \
             "source /home/hadoop/.bashrc \
             && cd /development/prod/oozie \
-            && bash run.sh application-hive-parquet-reader.conf oozie-hive-parquet-reader.json >> /home/data-management/cron_logs/oozie_hive_conf_jobs.log" \
+            && bash run.sh application-hive-json-reader.conf oozie-hive-json-reader.json >> /home/data-management/cron_logs/oozie_hive_conf_jobs.log" \
         2>&1""",
     dag=dag)
 
-t_pipeline0 >> t_pipeline1 >> t_pipeline2 >> t_pipeline3 >> t_pipeline4 >> t_pipeline5 >> t_pipeline6 >> t_pipeline7 >> t_pipeline8 >> t_pipeline9
+pipe0 >> pipe1 >> pipe2 >> pipe3 >> pipe4 >> pipe5 >> pipe6 >> pipe7 >> pipe8 >> pipe9
