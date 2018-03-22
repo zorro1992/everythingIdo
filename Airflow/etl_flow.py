@@ -20,7 +20,7 @@ t_pipeline0 = BashOperator(
     task_id='oozie_set',
     bash_command=
       """
-        ssh -i ~/.ssh/company.pem.pem hadoop@10.0.247.176 \
+        ssh -i ~/.ssh/company.pem.pem hadoop@x.y.x  \
         "cd /home/hadoop \
          && bash oozie.sh"
       """,
@@ -30,7 +30,7 @@ t_pipeline1 = BashOperator(
     task_id='oozie_01',
     bash_command=
       """
-        ssh -i ~/.ssh/company.pem.pem hadoop@10.0.247.176 \
+        ssh -i ~/.ssh/company.pem.pem hadoop@x.y.x \
         "cd /home/data-management/data-management/company \
          && oozie import-tableList --filePath companyMed --hiveDB company --parallel 10"
       """,
@@ -40,7 +40,7 @@ t_pipeline2 = BashOperator(
     task_id='oozie_02',
     bash_command=
       """
-        ssh -i ~/.ssh/company.pem.pem hadoop@x.y.z \
+        ssh -i ~/.ssh/company.pem.pem hadoop@x.y.x  \
         "cd /home/data-management/data-management/company \
          && oozie import-tableList --filePath companyBig --hiveDB company --parallel 8"
       """,
