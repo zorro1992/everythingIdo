@@ -70,7 +70,7 @@ RUN set -ex \
 
 COPY script/entrypoint.sh /entrypoint.sh
 COPY config/airflow.cfg ${AIRFLOW_HOME}/airflow.cfg
-MKDIR /usr/local/airflow/dags
+RUN mkdir -p /usr/local/airflow/dags
 COPY etl_flow.py /usr/local/airflow/dags/etl_flow.py
 
 RUN chown -R airflow: ${AIRFLOW_HOME}
