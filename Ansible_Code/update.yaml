@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+   - name: update
+     shell: sudo yum update all
+     become: true
