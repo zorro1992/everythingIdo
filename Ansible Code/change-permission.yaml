@@ -1,5 +1,0 @@
-- hosts: all
-  gather_facts: false
-  tasks:
-    - shell: chown hadoop:hadoop /usr/lib/presto/lib/plugin/hive-hadoop2/*
-      become: true

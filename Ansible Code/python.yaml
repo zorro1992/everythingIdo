@@ -1,6 +1,0 @@
----
-- hosts: all
-  tasks:
-   - name: python
-     shell: sudo yum -y install python2-devel
-     become: true

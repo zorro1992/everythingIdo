@@ -1,7 +1,0 @@
----
-- hosts: all
-  tasks:
-      - copy:
-           src: /etc/ansible/playbooks/hadoop-lzo-0.4.19.jar
-           dest: /usr/lib/presto/lib/plugin/hive-hadoop2
-        become: true
