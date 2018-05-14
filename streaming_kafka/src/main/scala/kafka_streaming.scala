@@ -14,6 +14,7 @@ object kafka_streaming {
       val ssc = new StreamingContext(sparkConf, Seconds(2))
 
       val lines = KafkaUtils.createStream(ssc, "localhost:2181", "test",Map("test" -> 5))
+      lines.print()
       ssc.start()
       ssc.awaitTermination()
     }
