@@ -1,0 +1,7 @@
+variable "AKIAJDZZNJRXPOITTQFQ" {}
+variable "o26JZIyqOsMTlQiPc05EONXvgbK3nUM52KjhJj6a" {}
+
+provider "aws" {
+  access_key = "${var.access_key}"
+  secret_key = "${var.secret_key}"
+}
