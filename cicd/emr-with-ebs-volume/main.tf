@@ -14,9 +14,9 @@ resource "aws_emr_cluster" "emr-test-cluster" {
   keep_job_flow_alive_when_no_steps = true
 
   ec2_attributes {
-    subnet_id                         = "subnet-57d3dc78"
-    emr_managed_master_security_group = "sg-784ce230"
-    emr_managed_slave_security_group  = "sg-5a73dd12"
+    subnet_id                         = "subnet-c78"
+    emr_managed_master_security_group = "sg-7"
+    emr_managed_slave_security_group  = "sg-d12"
     instance_profile                  = "EMR_EC2_DefaultRole"
   }
     ebs_root_volume_size     = 100
