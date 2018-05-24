@@ -1,0 +1,10 @@
+[
+      {
+        "Classification": "hive-site.xml",
+        "Properties": {
+          "javax.jdo.option.ConnectionURL": "jdbc:mysql://123/hive?createDatabaseIfNotExist=true",
+          "javax.jdo.option.ConnectionUserName": "hive",
+          "javax.jdo.option.ConnectionPassword": "awsd"
+      }
+  }
+]
