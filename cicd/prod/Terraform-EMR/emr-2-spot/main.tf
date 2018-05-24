@@ -16,7 +16,7 @@ resource "aws_emr_cluster" "emr-test-cluster" {
     emr_managed_slave_security_group  = "sg-123"
     service_access_security_group     = "sg-123"
     instance_profile                  = "EMR_EC2_DefaultRole"
-    key_name                          = "BigMama"
+    key_name                          = "as"
   }
 
   instance_group {
