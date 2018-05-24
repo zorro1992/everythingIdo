@@ -11,10 +11,10 @@ resource "aws_emr_cluster" "emr-test-cluster" {
 
 
   ec2_attributes {
-    subnet_id                         = "subnet-7b51f233"
-    emr_managed_master_security_group = "sg-25455741"
-    emr_managed_slave_security_group  = "sg-26455742"
-    service_access_security_group     = "sg-27455743"
+    subnet_id                         = "subnet-xyz"
+    emr_managed_master_security_group = "sg-123"
+    emr_managed_slave_security_group  = "sg-123"
+    service_access_security_group     = "sg-123"
     instance_profile                  = "EMR_EC2_DefaultRole"
     key_name                          = "BigMama"
   }
