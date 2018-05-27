@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_emr_cluster" "emr-test-cluster" {
-  name          = "Big-Data-Cluster-IAC-Terraform"
+  name          = "Big-Data-Cluster-IAC-Terraform-I-Love-it"
   release_label = "emr-5.5.0"
   applications  = ["Spark","Hive","Hadoop","Spark","Zeppelin","Hue","Tez","ZooKeeper","Sqoop"]
   termination_protection = false
