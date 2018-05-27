@@ -2,7 +2,7 @@
 This repo has everything I have done till now in the during my worklife
 
 
-# Everything about Big Data Platform --- Infrastructer as Code (IaC)
+# Everything about how the Big Data Platform is built using --- Infrastructer as Code (IaC)
 
 
 
