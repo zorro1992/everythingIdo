@@ -15,4 +15,4 @@ Code to get data(Scala and AWS commands ) --> Code to build the platform(terrafo
 
 ![Screenshot]![Screenshot](1.png)
 ![Screenshot]![Screenshot](2.png)
-![Screenshot]! [Screenshot](Screen Shot 2018-05-28 at 2.28.44 PM.png)
+![Screenshot]![Screenshot](Screen Shot 2018-05-28 at 2.28.44 PM.png)
