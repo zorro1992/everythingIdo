@@ -1,0 +1,15 @@
+You need to run this command from Master node 
+
+Give the core-node ID in the section InstanceGroupId and you will be able to resize it
+
+aws emr modify-instance-groups --instance-groups InstanceGroupId=ig-31JXXXXXXBTO,InstanceCount=4
+
+Using this idea we can do time-based auto-scaling on the EMR 
+
+    1) If your using Airflow then DAG 1 cannot be used for scaling because the above command is going to return success result. 
+    2) Hence on the machine, you need to have a cron / Or a separate DAG that can be used to trigger this resize.
+    3) Resizing takes time so let's say you need the cluster to be ready by 9:00 AM in the morning it is always better to start resizing 1 hour before for approx. 30machines. More the machines more time it is going to take.
+ Once the ETL completes in the last DAG you can trigger an ssh command to go to the master and reduce the number of nodes back to 3 or 4. 
+
+
+ AWS link : https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-manage-resize.html
