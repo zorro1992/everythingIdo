@@ -1,0 +1,7 @@
+2018-10-08 15:22:18,147:INFO,Starting new HTTPS connection (1): ec2.eu-west-1.amazonaws.com
+2018-10-08 15:22:19,793:INFO,Starting new HTTPS connection (1): ec2.eu-west-1.amazonaws.com
+2018-10-08 15:22:20,527:INFO,Machine with Private IP 172.31.11.163 is created
+2018-10-08 15:31:14,084:INFO,Starting new HTTPS connection (1): ec2.eu-west-1.amazonaws.com
+2018-10-08 15:31:16,189:INFO,Starting new HTTPS connection (1): ec2.eu-west-1.amazonaws.com
+2018-10-08 15:31:16,879:INFO,Machine with Private IP 172.31.5.87 is created
+2018-10-08 15:31:16,879:INFO,Ip has been written to the IP file

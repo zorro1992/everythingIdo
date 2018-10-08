@@ -1,0 +1,1 @@
+UserRequiredInstanceType='t2.micro'
