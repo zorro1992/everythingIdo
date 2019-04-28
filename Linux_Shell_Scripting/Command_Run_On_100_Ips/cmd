@@ -1,0 +1,2 @@
+sudo rm -rf /var/log/hadoop/yarn
+sudo mkdir test 
