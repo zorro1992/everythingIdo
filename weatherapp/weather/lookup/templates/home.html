@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+{% if api  %}
+
+    {% if api == "Error...." %}
+        There is a Error in the API 
+    {% else %}
+    <div class="jumbotron">
+        <h1 class="display-4">{{ api.0.Category.Name }}</h1>
+        <p class="lead">{{ api.0.ReportingArea }} Air Quality: {{ api.0.AQI }}</p>
+    {% endif %}
+
+{% endif %}
+
+{%  endblock %}
